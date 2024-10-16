@@ -24,4 +24,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # تحديد الأمر الأساسي لتشغيل التطبيق
-CMD ["python", "bot.py"]
+ENTRYPOINT ["python", "bot.py"]
