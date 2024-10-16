@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-# تثبيت Tesseract والأدوات الأخرى
+# تثبيت Tesseract والأدوات المطلوبة
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     libtesseract-dev \
@@ -10,11 +10,11 @@ RUN apt-get update && apt-get install -y \
 # إعداد مجلد العمل
 WORKDIR /app
 
-# نسخ ملفات المشروع إلى الحاوية
+# نسخ الملفات إلى الحاوية
 COPY . .
 
 # تثبيت المتطلبات
 RUN pip install --no-cache-dir -r requirements.txt
 
-# تحديد الأمر الأساسي لتشغيل التطبيق
+# تحديد الأمر لتشغيل التطبيق
 CMD ["python", "bot.py"]
