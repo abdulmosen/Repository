@@ -1,8 +1,9 @@
 FROM python:3.9-slim
 
-# تثبيت الأدوات الأساسية و Tesseract والاعتماديات المطلوبة
+# تثبيت الأدوات الأساسية و curl و Tesseract والاعتماديات المطلوبة
 RUN apt-get update && apt-get install -y \
     apt-utils \
+    curl \
     tesseract-ocr \
     libtesseract-dev \
     poppler-utils \
