@@ -1,0 +1,9 @@
+python-telegram-bot==20.3
+pytesseract
+pdf2image
+python-docx
+arabic-reshaper
+python-bidi
+pdfplumber
+requests
+Pillow
